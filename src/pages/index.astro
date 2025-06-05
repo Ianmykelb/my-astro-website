@@ -1,16 +1,93 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home | My Astro Site">
+  <!-- Hero Section -->
+  <div class="hero-wrapper">
+    <div class="hero container">
+      <div class="hero-text">
+        <h1>Welcome to My Astro Website</h1>
+        <p>This is a simple homepage built with Astro. 🚀</p>
+      </div>
+      <div class="hero-image">
+        <img src="/hero-img-1.jpg" alt="Hero image" />
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container about">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          We’re a team of developers, designers, and strategists who love
+          building fast, accessible websites using cutting-edge tools like
+          Astro. Our mission is to help people create web experiences that feel
+          great to use and are easy to maintain.
+        </p>
+        <p>
+          Whether you're launching a startup or revamping a legacy system, we
+          bring the technical excellence and creative problem-solving you need
+          to succeed.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/team-photo.jpg" alt="Our Team" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Features -->
+  <section class="features container">
+    <h2>What We Offer</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>⚡ Speed</h3>
+        <p>Astro delivers performance-focused static sites out of the box.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🛠️ Flexibility</h3>
+        <p>Use your favorite components—React, Vue, or no JS at all.</p>
+      </div>
+      <div class="feature-item">
+        <h3>📱 Responsive</h3>
+        <p>Every layout looks beautiful on desktop, tablet, and mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section -->
+  <section class="blog-preview container blog-wrapper">
+    <div class="blog-preview container">
+      <h2>From the Blog</h2>
+      <article class="blog-card">
+        <h3><a href="/blog/welcome">Welcome to the Blog</a></h3>
+        <p>This is a blog post written in Markdown and rendered by Astro.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-wrapper">
+    <div class="cta container">
+      <h2>Ready to Launch Your Site?</h2>
+      <p>Contact us today and let's build something great together.</p>
+      <a href="/contact" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Named Slots from Layout -->
+  <div slot="banner" class="banner">
+    <p>🚨 Special announcement goes here!</p>
+  </div>
+
+  <div slot="sidebar">
+    <p>🗂 Quick links or info on the side.</p>
+  </div>
+
+  <div slot="footer">
+    <p>📞 Contact us: support@example.com</p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+const { title = "My Astro Site" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+      </nav>
+    </header>
+    <slot name="banner" />
+    <!-- Optional banner slot -->
+
+    <div>
+      <!--<aside>
+        <slot name="sidebar" /> Optional sidebar slot
+      </aside> -->
+
+      <main>
+        <slot />
+        <!-- Main content -->
+      </main>
+    </div>
+
+    <footer>
+      <slot name="footer" />
+      <!-- Optional custom footer -->
+      <p>&copy; 2025 My Astro Website</p>
+    </footer>
+  </body>
+</html>

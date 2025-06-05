@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+header,
+footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 1600px-wide centered content */
+.container {
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem; /* Padding for small screens */
+}
+
+/* Full-width wrapper for background */
+.hero-wrapper {
+  background-image: url("C:\Users\Ian\OneDrive\Desktop\Astro Site\my-astro-website\src\assets\hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 60vh; /* Optional: full-screen height */
+  display: flex;
+  align-items: center; /* Vertical centering */
+}
+
+/* Hero-specific styles */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 4em 1em;
+}
+
+/* Text on the left */
+.hero-text {
+  flex: 1;
+}
+
+/* Image on the right */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 56px;
+}
+.hero p {
+  color: #fff;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+.layout {
+  gap: 2rem;
+}
+
+aside {
+  width: 25%;
+  background: #c9ffd2;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+}
+.banner {
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+  background-color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item h3 {
+  color: #2a5298;
+  margin-bottom: 0.5rem;
+}
+
+.blog-wrapper {
+  width: 100%;
+}
+
+.blog-preview {
+  background: #f0f4f8;
+  padding: 4rem 1rem;
+}
+
+.blog-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+.blog-card h3 a {
+  text-decoration: none;
+  color: #1e3c72;
+}
+
+.blog-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.cta-wrapper {
+  background: #1e3c72;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  display: inline-block;
+  background: #ff5e57;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e94e49;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack vertically */
+    padding: 2em 1em; /* Reduce padding */
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    max-width: 80%; /* Shrink image */
+    margin-top: 1em;
+  }
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
