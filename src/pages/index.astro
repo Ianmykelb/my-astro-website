@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getHomepage } from "../utils/contentful.js";
+
+const homepage = await getHomepage();
 ---
 
 <BaseLayout title="Home | My Astro Site">
@@ -7,11 +10,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="hero-wrapper">
     <div class="hero container">
       <div class="hero-text">
-        <h1>Welcome to My Astro Website</h1>
-        <p>This is a simple homepage built with Astro. 🚀</p>
+        <h1>{homepage.heroTitle}</h1>
+        <p>{homepage.heroText}</p>
       </div>
       <div class="hero-image">
-        <img src="/hero-img-1.jpg" alt="Hero image" />
+        <img src={homepage.heroImage.fields.file.url} alt="Hero image" />
       </div>
     </div>
   </div>
@@ -21,20 +24,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="container about">
       <div class="about-text">
         <h2>About Us</h2>
-        <p>
-          We’re a team of developers, designers, and strategists who love
-          building fast, accessible websites using cutting-edge tools like
-          Astro. Our mission is to help people create web experiences that feel
-          great to use and are easy to maintain.
-        </p>
-        <p>
-          Whether you're launching a startup or revamping a legacy system, we
-          bring the technical excellence and creative problem-solving you need
-          to succeed.
-        </p>
+        <p>{homepage.aboutText1}</p>
+        <p>{homepage.aboutText2}</p>
       </div>
       <div class="about-image">
-        <img src="/team-photo.jpg" alt="Our Team" />
+        <img src={homepage.aboutImage.fields.file.url} alt="Our Team" />
       </div>
     </div>
   </section>
@@ -74,13 +68,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="cta container">
       <h2>Ready to Launch Your Site?</h2>
       <p>Contact us today and let's build something great together.</p>
-      <a href="/contact" class="cta-button">Get in Touch</a>
+      <a href="/contact" class="cta-button">{homepage.ctaTitle}</a>
     </div>
   </section>
 
   <!-- Named Slots from Layout -->
   <div slot="banner" class="banner">
-    <p>🚨 Special announcement goes here!</p>
+    <p>{homepage.bannerText}</p>
   </div>
 
   <div slot="sidebar">
@@ -88,6 +82,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <div slot="footer">
-    <p>📞 Contact us: support@example.com</p>
+    <p>{homepage.footerText}</p>
   </div>
 </BaseLayout>
