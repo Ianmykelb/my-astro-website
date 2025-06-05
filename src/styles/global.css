@@ -46,7 +46,7 @@ footer {
 
 /* Full-width wrapper for background */
 .hero-wrapper {
-  background-image: url("C:\Users\Ian\OneDrive\Desktop\Astro Site\my-astro-website\src\assets\hero-bg.jpg");
+  background-image: url("/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
